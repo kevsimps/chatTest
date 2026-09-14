@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 
-<body onload="popit()">
+<body>
 
     <style>
         body {
@@ -51,7 +51,12 @@
 
     </section>
 
-    <script>function popit() { imichatwidget.maximizeWindow(); console.log("popit fired") }</script>
+    <script>function popit() { imichatwidget.maximizeWindow(); console.log("popit fired") }
+        function checkit() {
+            if (document.readyState === 'complete') { popit() }
+            else { window.addEventListener('load', popit) }
+        } checkit()
+    </script>
 
 </body>
 
