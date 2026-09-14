@@ -55,7 +55,8 @@
     function popit() {
         imichatwidget.maximizeWindow(); 
         console.log("popit fired") }
-        document.addEventListener('load', popit());
+        window.addEventListener('webchatLoaded', popit())
+        // document.addEventListener('load', popit());
     </script>
 
 </body>
