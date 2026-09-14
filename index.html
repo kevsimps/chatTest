@@ -51,11 +51,10 @@
 
     </section>
 
-    <script>function popit() { imichatwidget.maximizeWindow(); console.log("popit fired") }
-        function checkit() {
-            if (document.readyState === 'complete') { popit() }
-            else { window.addEventListener('load', popit) }
-        } checkit()
+    <script>
+    function popit() { imichatwidget.maximizeWindow(); console.log("popit fired") }
+
+        document.addEventListener('DOMContentLoaded', popit)
     </script>
 
 </body>
